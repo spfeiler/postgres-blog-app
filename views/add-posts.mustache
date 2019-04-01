@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    {{> menu}}
+
+    <form action="/add-posts" method="POST">
+      <input type="text" name="title" placeholder="Enter Blog Title" />
+      <textarea name="body" rows="8" cols="80"></textarea>
+      <button type="submit">Save</button>
+    </form>
+
+  </body>
+</html>

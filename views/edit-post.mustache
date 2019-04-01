@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    {{> menu}}
+    <h2>Edit Post</h2>
+    {{#post}}
+    <form action="/edit-post" method="POST">
+      <input type="hidden" name="editpostid" value="{{postid}}" />
+      <input type="text" name="title" placeholder="{{title}}" />
+      <textarea name="body" rows="8" cols="80" placeholder="{{body}}"></textarea>
+      <button type="submit">Update</button>
+    </form>
+    {{/post}}
+  </body>
+</html>

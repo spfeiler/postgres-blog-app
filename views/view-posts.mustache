@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    {{> menu}}
+
+    <h2>Blog Posts</h2>
+
+    <ul>
+      {{#posts}}
+      <li>
+        <h3>{{title}}</h3>
+        <p>{{body}}</p>
+        <form action="/edit" method="POST">
+          <input type="hidden" name="editpostid" value="{{postid}}" />
+          <button type="submit">Edit</button>
+        </form>
+        <form action="/delete-post" method="POST">
+          <input type="hidden" name="postid" value="{{postid}}" />
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      {{/posts}}
+    </ul>
+  </body>
+</html>
